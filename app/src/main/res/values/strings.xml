@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyPokeDex</string>
+    <string name="pokemon_title_string">pokemon_name</string>
+    <string name="lorem_30_string">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam maximus fermentum lorem, nec bibendum ligula iaculis et. Cras semper eros a congue luctus. Integer porttitor ut mauris a aliquet. Pellentesque.</string>
+    <string name="runtime_ex_string">130min</string>
+    <string name="pokemon_id_string">1</string>
+    <string name="pokemon_name_string">Pokemon Name</string>
+    <string name="n_a_value">N/A</string>
+</resources>

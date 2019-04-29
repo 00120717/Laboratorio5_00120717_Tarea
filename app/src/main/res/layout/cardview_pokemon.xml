@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/pokemon_image_cv"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/pokemon_name_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/pokemon_image_cv"
+            android:layout_alignRight="@id/pokemon_image_cv"
+            android:layout_alignBottom="@id/pokemon_image_cv"
+            android:layout_margin="16dp"
+
+            android:background="#65000000"
+            android:gravity="end"
+
+            android:lines="1"
+            android:padding="8dp"
+
+            android:text="@string/pokemon_title_string"
+            android:textColor="#fff"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/pokemon_id_cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/pokemon_image_cv"
+            android:layout_alignLeft="@id/pokemon_image_cv"
+            android:layout_alignTop="@id/pokemon_image_cv"
+
+            android:layout_margin="16dp"
+            android:background="#65000000"
+
+            android:gravity="end"
+            android:padding="8dp"
+
+            android:text="@string/pokemon_id_string"
+            android:textColor="#fff"
+
+            android:textSize="25sp" />
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pokemon_image_cv"
+        >
+
+
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+            >
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="Type 1:"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                />
+
+                <TextView
+                        android:id="@+id/type1_cv"
+
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="@string/n_a_value"
+                        android:textSize="18sp"
+                />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+            >
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="Type 2:"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                />
+
+                <TextView
+                        android:id="@+id/type2_cv"
+
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="@string/n_a_value"
+                        android:textSize="18sp"
+                />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+            >
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="Weight:"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                />
+
+                <TextView
+                        android:id="@+id/weight_cv"
+
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="@string/n_a_value"
+                        android:textSize="18sp"
+                />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+            >
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="Height:"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                />
+
+                <TextView
+                        android:id="@+id/height_cv"
+
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="@string/n_a_value"
+                        android:textSize="18sp"
+                />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+            >
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="Sprite:"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                />
+
+                <TextView
+                        android:id="@+id/sprites_cv"
+
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_marginBottom="4dp"
+
+                        android:text="@string/n_a_value"
+                        android:textSize="18sp"
+                />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
