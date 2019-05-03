@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity(), MainListFragment.SearchNewMovieListene
         changeFragment(resource, mainFragment)
     }
 
-    fun addMovieToList(pokemon: Pokemon) {
+    fun addPokemonToList(pokemon: Pokemon) {
         pokemonList.add(pokemon)
         mainFragment.updatePokemonsAdapter(pokemonList)
         Log.d("Number", pokemonList.size.toString())
@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity(), MainListFragment.SearchNewMovieListene
             if (params.isNullOrEmpty()) return ""
 
             val pokemonName = params[0]
-            val pokemonUrl = NetworkUtils().buildtSearchUrl(pokemonName)
+            val pokemonUrl = NetworkUtils().buildtSearchUrl("type",pokemonName)
 
             return try {
                 NetworkUtils().getResponseFromHttpUrl(pokemonUrl)
@@ -92,19 +92,30 @@ class MainActivity : AppCompatActivity(), MainListFragment.SearchNewMovieListene
         }
 
         override fun onPostExecute(pokemonInfo: String) {
-            super.onPostExecute(pokemonInfo)
-            if (!pokemonInfo.isEmpty()) {
-                val pokemonJson = JSONObject(pokemonInfo)
-                if (pokemonJson.getString("Response") == "True") {
-                    val pokemon = Gson().fromJson<Pokemon>(pokemonInfo, Pokemon::class.java)
-                    addMovieToList(pokemon)
-                } else {
-                    Toast.makeText(this@MainActivity, "No existe en la base de datos,", Toast.LENGTH_LONG).show()
+            val pokemon = if (!pokemonInfo.isEmpty()) {
+                val root = JSONObject(pokemonInfo)
+                val results = root.getJSONArray("pokemon")
+                MutableList(20) { i ->
+                    val resulty = JSONObject(results[i].toString())
+                    val result = JSONObject(resulty.getString("pokemon"))
+
+                    addPokemonToList(
+                        Pokemon(i,
+                            result.getString("name").capitalize(),
+                            R.string.n_a_value.toString(),
+                            R.string.n_a_value.toString(),
+                            R.string.n_a_value.toString(),
+                            R.string.n_a_value.toString(),
+                            result.getString("url"),
+                            R.string.n_a_value.toString())
+                    )
                 }
-            }else
-            {
-                Toast.makeText(this@MainActivity, "A ocurrido un error,", Toast.LENGTH_LONG).show()
+            } else {
+                MutableList(20) { i ->
+                    Pokemon(i, R.string.n_a_value.toString(), R.string.n_a_value.toString(), R.string.n_a_value.toString(),R.string.n_a_value.toString(), R.string.n_a_value.toString(), R.string.n_a_value.toString(), R.string.n_a_value.toString())
+                }
             }
+
         }
     }
 }

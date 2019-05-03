@@ -39,7 +39,6 @@ class MainContentFragment: Fragment() {
         view.type2_main_content_fragment.text = pokemon.sndtype
         view.weight_main_content_fragment.text = pokemon.weight
         view.height_main_content_fragment.text = pokemon.height
-        view.sprite_main_content_fragment.text = pokemon.sprite
 
         Glide.with(view).load(pokemon.url)
             .placeholder(R.drawable.ic_launcher_background)

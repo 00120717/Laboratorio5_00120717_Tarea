@@ -209,41 +209,6 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-            >
-
-                <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="8dp"
-                        android:paddingRight="8dp"
-                        android:layout_marginBottom="4dp"
-
-                        android:text="Sprite:"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                />
-
-                <TextView
-                        android:id="@+id/sprites_cv"
-
-                        android:layout_width="0dp"
-                        android:layout_weight="3"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="8dp"
-                        android:paddingRight="8dp"
-                        android:layout_marginBottom="4dp"
-
-                        android:text="@string/n_a_value"
-                        android:textSize="18sp"
-                />
-
-            </LinearLayout>
 
 
         </LinearLayout>

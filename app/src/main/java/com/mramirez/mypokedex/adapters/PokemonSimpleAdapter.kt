@@ -4,13 +4,13 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.mramirez.mypokedex.MyMovieAdapter
+import com.mramirez.mypokedex.MyPokemonAdapter
 import com.mramirez.mypokedex.R
 import com.mramirez.mypokedex.models.Pokemon
 import kotlinx.android.synthetic.main.list_item_pokemon.view.*
 
 class PokemonSimpleListAdapter(var pokemons:List<Pokemon>, val clickListener: (Pokemon) -> Unit): RecyclerView.Adapter<PokemonSimpleListAdapter.ViewHolder>(),
-    MyMovieAdapter {
+    MyPokemonAdapter {
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item_pokemon, parent, false)

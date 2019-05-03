@@ -26,7 +26,7 @@ class PokemonViewerActivity: AppCompatActivity() {
 
     fun init(pokemon: Pokemon){
         Glide.with(this)
-            .load(pokemon.url)
+            .load(pokemon.sprite)
             .placeholder(R.drawable.ic_launcher_background)
             .into(app_bar_image_viewer)
         collapsingtoolbarviewer.title = pokemon.name
@@ -35,7 +35,7 @@ class PokemonViewerActivity: AppCompatActivity() {
         type2_main_content_fragment.text = pokemon.sndtype
         weight_main_content_fragment.text = pokemon.weight
         height_main_content_fragment.text = pokemon.height
-        sprite_main_content_fragment.text = pokemon.sprite
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

@@ -9,12 +9,13 @@ import java.util.*
 
 class NetworkUtils {
 
-    val POKEMON_API_BASEURL = "https://pokeapi.co/api/v2/pokemon/"
+    val POKEMON_API_BASEURL = "https://pokeapi.co/api/v2/"
     val TOKEN_API = "8b0b11f6"
 
-    fun buildtSearchUrl(pokemonName: String) : URL {
+    fun buildtSearchUrl(root: String,pokemonName: String) : URL {
         val builtUri = Uri.parse(POKEMON_API_BASEURL)
             .buildUpon()
+            .appendPath(root)
             .appendPath(pokemonName)
             .build()
 

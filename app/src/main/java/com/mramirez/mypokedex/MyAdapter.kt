@@ -7,6 +7,6 @@ object AppConstants{
     val MAIN_LIST_KEY = "key_list_pokemon"
 }
 
-interface MyMovieAdapter {
+interface MyPokemonAdapter {
     fun changeDataSet(newDataSet : List<Pokemon>)
 }

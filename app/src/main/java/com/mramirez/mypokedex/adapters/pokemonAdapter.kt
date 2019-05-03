@@ -5,15 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
-import com.mramirez.mypokedex.MyMovieAdapter
+import com.mramirez.mypokedex.MyPokemonAdapter
 import com.mramirez.mypokedex.R
 import com.mramirez.mypokedex.models.Pokemon
-import kotlinx.android.synthetic.main.cardview_pokemon.view.*
+import kotlinx.android.synthetic.main.list_item_pokemon.view.*
 
 class PokemonAdapter(var pokemons: List<Pokemon>, val clickListener: (Pokemon) -> Unit): RecyclerView.Adapter<PokemonAdapter.ViewHolder>(),
-    MyMovieAdapter {
+    MyPokemonAdapter {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.cardview_pokemon, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item_pokemon, parent, false)
         return ViewHolder(view)
     }
     override fun getItemCount() = pokemons.size
@@ -27,16 +27,9 @@ class PokemonAdapter(var pokemons: List<Pokemon>, val clickListener: (Pokemon) -
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         fun bind(item: Pokemon, clickListener: (Pokemon) -> Unit) = with(itemView){
-            Glide.with(itemView.context)
-                .load(item.url)
-                .placeholder(R.drawable.ic_launcher_background)
-                .into(pokemon_image_cv)
-            pokemon_name_cv.text = item.name
-            type1_cv.text = item.fsttype
-            type2_cv.text = item.sndtype
-            weight_cv.text = item.weight
-            height_cv.text = item.height
-            sprites_cv.text = item.sprite
+           title_list_item.text = item.name
+           type1_list_item.text = item.fsttype
+            type2_list_item.text = item.sndtype
             this.setOnClickListener { clickListener(item) }
         }
     }

@@ -9,7 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.mramirez.mypokedex.AppConstants
-import com.mramirez.mypokedex.MyMovieAdapter
+import com.mramirez.mypokedex.MyPokemonAdapter
 import com.mramirez.mypokedex.R
 import com.mramirez.mypokedex.adapters.PokemonAdapter
 import com.mramirez.mypokedex.adapters.PokemonSimpleListAdapter
@@ -20,7 +20,7 @@ import kotlinx.android.synthetic.main.pokemons_list_fragment.view.*
 class MainListFragment: Fragment(){
 
     private lateinit var  pokemons :ArrayList<Pokemon>
-    private lateinit var pokemonsAdapter : MyMovieAdapter
+    private lateinit var pokemonsAdapter : MyPokemonAdapter
     var listenerTool :  SearchNewMovieListener? = null
 
     companion object {
